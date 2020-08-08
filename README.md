@@ -1,70 +1,54 @@
 # Web-Scrapping using Beautifulsoup
 
-Projek ini dikembangkan sebagai salah satu capstone project dari Algoritma Academy Data Analytics Specialization. Deliverables yang diharapkan dari projek ini adalah melakukan simple webscrapping untuk mendapatkan informasi. Untuk step by step guide, Bapak Ibu dipersilahkan untuk membuka git saya [Click here](https://github.com/t3981-h/Webscrapping-with-BeautifulSoup "Webscrapping with Beautiful Soup"). Kita juga akan memanfaatkan flask dashboard sederhana untuk menampilkan hasil scrap dan visualisasi kita.
+Projek ini dikembangkan sebagai salah satu bentuk pengembangan diri dalam ilmu data. Hasil akhir yang diharapkan dari projek ini adalah melakukan simple webscrapping untuk mendapatkan informasi dari website. Dalam projek ini juga Kita akan memanfaatkan flask dashboard sederhana untuk menampilkan hasil scrap dan visualisasi kita.
 
 ## Dependencies
+
+Pastikan untuk melakukan instalasi beberapa librari berikut:
 
 - beautifulSoup4
 - pandas
 - flask
 - matplotlib
 
-Atau Bapak Ibu cukup menginstall requirements.txt dengan cara berikut
+Atau cukup menginstall requirements.txt dengan cara berikut
 
 ```python
 pip install -r requirements.txt
 ```
 
-## Rubics
-
-- Environment preparation (2 points)
-- Finding the right key to scrap the data  & Extracting the right information (5 points)
-- Creating data frame & Data wrangling (5 points)
-- Creating a tidy python notebook as a report. (2 points)
-- Implement it on flask dashboard (2 points)
-
 
 ## What You Need to Do
 
-* Silahkan mencoba melakukan scraping soal di bawah menggunakan `beautiful soup` di notebook Bapak/Ibu terlebih dahulu.
-* Bapak/Ibu dapat men-clone repo ini.
-* Silahkan buka notebook template pada capstone ini dan isi sesuai dengan arahan yang ada. Pastikan Bapak/Ibu memberikan analisa yang dibutuhkan pada notebook tersebut.
-* File di repo ini adalah skeleton yang dapat digunakan untuk membuat flask dashboard sederhana.
-* Silahkan isi di bagian yang masih kosong.
-* Isi fungsi `scrap` dengan proses scraping yang sudah Bapak/Ibu lakukan di notebook. 
+* Silahkan mencoba melakukan scraping menggunakan `beautiful soup` di notebook terlebih dahulu.
+* Untuk tag informasi yang ingin didapatkan dapat disesuaikan.
+
 
 ```python
-table = soup.find(___)
-tr = table.find_all(___)
+ main_webpage = soup.find(____)
+ box_movie = soup.find_all(___)
 ```
 
-* Isi bagian ini untuk menyimpan hasil scrap yang Bapak/Ibu buat menjadi sebuah dataframe.
+* Isi bagian ini untuk menyimpan hasil informasi yang sudah berhasil didapatkan menjadi sebuah dataframe.
 
 ```python
 df = pd.DataFrame(name of your tupple, columns = (name of the columns))
 ```
 
-* Terakhir Bapak/Ibu dapat menggunakan fungsi `scrap` dengan cara mengisi bagian berikut dengan link web yang Bapak/Ibu scrap.
+* Terakhir anda dapat menggunakan fungsi `scrap` dengan cara mengisi bagian berikut dengan link url web yang anda inginkan.
 
 ```python
-df = scrap(___) #insert url here
+dataset_movie = scrap(___) #insert url here
 ```
 
 * Bapak/Ibu juga dapat bermain dengan UI nya pada `index.html` yang dimana Bapak/Ibu dapat mengikuti comment yang ada untuk mengetahui bagian mana yang dapat diubah. 
 
-### The Final Mission
+### Data Resource
 
-Pada captsone kali ini, Bapak Ibu bisa memilih salah satu soal ini untuk dikerjakan.
-
-1. Data kurs Japan Yen ke rupiah pada tahun 2020 dari `https://news.mifx.com/kurs-valuta-asing?kurs=JPY`
-
-    * Dari halaman tersebut carilah `kurs jual`, `Kurs beli` dan `tanggal`
-    * Bualah plot pergerakan kurs JPY pada tahun 2020
-
-2. Data film yang rilis di tahun 2019 dari `imdb.com/search/title/?release_date=2019-01-01,2019-12-31`
+1. Data film yang rilis di tahun 2019 dari `imdb.com/search/title/?release_date=2019-01-01,2019-12-31`
 
     * Dari Halaman tersebut carilah `judul` , `imdb rating` , `metascore`, dan `votes`
-    * Buatlah plot dari 7 film paling populer di tahun 2019.
+    * Membuat plot dari 7 film paling populer di tahun 2019.
 
 
 Happy learning! 
